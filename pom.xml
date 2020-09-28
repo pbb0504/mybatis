@@ -21,7 +21,7 @@
   <parent>
     <groupId>org.mybatis</groupId>
     <artifactId>mybatis-parent</artifactId>
-    <version>32-SNAPSHOT</version>
+    <version>30</version>
   </parent>
 
   <artifactId>mybatis</artifactId>
@@ -195,7 +195,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.11</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -241,6 +241,21 @@
       <version>9.1-901-1.jdbc4</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-site-plugin</artifactId>
+      <version>3.9.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-pdf-plugin</artifactId>
+      <version>1.4</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.0.0-M5</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -248,6 +263,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
         <configuration>
           <systemProperties>
             <property>
@@ -260,6 +276,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-pdf-plugin</artifactId>
+        <version>1.4</version>
       </plugin>
       <plugin>
         <groupId>org.sonatype.plugins</groupId>
@@ -313,6 +330,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
+        <version>3.9.1</version>
         <configuration>
           <locales>en,es,ja,fr,zh_CN,ko</locales>
         </configuration>
@@ -332,6 +350,7 @@
               <exclude>org/apache/ibatis/javassist/**/*.class</exclude>
             </excludes>
           </instrumentation>
+          <check/>
         </configuration>
         <executions>
           <execution>
